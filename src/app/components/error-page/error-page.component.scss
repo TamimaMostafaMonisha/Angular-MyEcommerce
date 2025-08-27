@@ -1,0 +1,163 @@
+// // variables and mixins (top of file)
+// $radius: 14px;
+// $card-bg: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+// $glass-bg: rgba(255,255,255,0.03);
+// $text: #e6eef8;
+// $muted: #a8b3c7;
+// $accent: #6366f1; // indigo-ish
+// $danger: #fb7185;
+
+// @function rem($px) {
+//   @return #{$px / 16}rem;
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   @keyframes float {
+//     0% { transform: translateY(0); }
+//     50% { transform: translateY(-8px); }
+//     100% { transform: translateY(0); }
+//   }
+
+//   @keyframes fadeInUp {
+//     from { opacity: 0; transform: translateY(8px); }
+//     to { opacity: 1; transform: translateY(0); }
+//   }
+// }
+
+// .error-page {
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: rem(24);
+//   background: linear-gradient(180deg, #0f1724 0%, #071026 100%);
+//   color: $text;
+//   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+//   &__card {
+//     display: flex;
+//     gap: rem(28);
+//     align-items: center;
+//     max-width: rem(960);
+//     width: 100%;
+//     background: $card-bg;
+//     padding: rem(28);
+//     border-radius: $radius;
+//     box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+//     border: 1px solid rgba(255,255,255,0.03);
+//     backdrop-filter: blur(6px);
+//     @media (max-width: 760px) {
+//       flex-direction: column;
+//       padding: rem(20);
+//     }
+//   }
+
+//   &__graphic {
+//     flex: 0 0 rem(220);
+//     height: rem(220);
+//     display: grid;
+//     place-items: center;
+//     border-radius: 12px;
+//     background: radial-gradient(120% 80% at 10% 20%, rgba(99,102,241,0.12), transparent 25%),
+//                 linear-gradient(135deg, rgba(99,102,241,0.06), transparent);
+//     position: relative;
+//     overflow: hidden;
+
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       inset: 0;
+//       background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+//       pointer-events: none;
+//     }
+
+//     .error-page__code {
+//       font-size: rem(72);
+//       font-weight: 800;
+//       letter-spacing: rem(-1);
+//       color: rgba(99,102,241,0.95);
+//       text-shadow: 0 6px 30px rgba(99,102,241,0.06);
+//       @media (prefers-reduced-motion: no-preference) {
+//         animation: float 4s ease-in-out infinite;
+//       }
+//     }
+//   }
+
+//   &__content {
+//     flex: 1 1 auto;
+//     min-width: 0;
+
+//     & > * {
+//       @media (prefers-reduced-motion: no-preference) {
+//         animation: fadeInUp 420ms ease both;
+//       }
+//     }
+//   }
+
+//   &__title {
+//     margin: 0;
+//     font-size: rem(28);
+//     font-weight: 700;
+//     color: $text;
+//   }
+
+//   &__desc {
+//     margin: rem(8) 0 rem(18);
+//     color: $muted;
+//     line-height: 1.6;
+//   }
+
+//   &__actions {
+//     display: flex;
+//     gap: rem(12);
+//     align-items: center;
+//     margin-bottom: rem(12);
+
+//     .btn {
+//       display: inline-flex;
+//       align-items: center;
+//       gap: rem(8);
+//       padding: rem(10) rem(16);
+//       border-radius: rem(10);
+//       font-weight: 600;
+//       cursor: pointer;
+//       border: none;
+//       text-decoration: none;
+//       transition: transform .12s ease, box-shadow .12s ease;
+//       will-change: transform;
+
+//       &:hover { transform: translateY(-3px); }
+
+//       &--primary {
+//         background: $accent;
+//         color: white;
+//         box-shadow: 0 8px 24px rgba(99,102,241,0.12);
+//       }
+
+//       &--ghost {
+//         background: transparent;
+//         color: $text;
+//         border: 1px solid rgba(255,255,255,0.06);
+//         backdrop-filter: blur(4px);
+//       }
+//     }
+//   }
+
+//   &__hint {
+//     margin: 0;
+//     color: rgba($muted, 0.95);
+//     font-size: rem(13);
+//   }
+
+//   // small screens
+//   @media (max-width: 520px) {
+//     padding: rem(16);
+
+//     &__card {
+//       gap: rem(14);
+//     }
+
+//     &__graphic { height: rem(140); flex-basis: rem(140); .error-page__code { font-size: rem(44); } }
+//     &__title { font-size: rem(20); }
+//   }
+// }
