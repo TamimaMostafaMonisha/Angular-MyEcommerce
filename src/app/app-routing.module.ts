@@ -8,6 +8,8 @@ import { ShopComponent } from './components/shop/shop.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { UserAddEditComponent } from './components/user-add-edit/user-add-edit.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -18,7 +20,11 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'single', component: ShopSingleComponent },
+  { path: 'users', component: UserListComponent},
+  { path: 'users/add', component: UserAddEditComponent },
+  { path: 'users/edit/:id', component: UserAddEditComponent },
   { path: '**', component: ErrorPageComponent }
+  
 ];
 
 @NgModule({

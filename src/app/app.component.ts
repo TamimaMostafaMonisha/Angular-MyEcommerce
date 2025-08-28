@@ -8,7 +8,7 @@ import { Route, Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'myEcom';
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   constructor(private router: Router){}
   ngOnInit(): void {
